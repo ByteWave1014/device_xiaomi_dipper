@@ -16,6 +16,9 @@ persist.camera.sat.fallback.dist.d=5
 persist.camera.sat.fallback.luxindex=405
 persist.camera.sat.fallback.lux.d=20
 
+# Dalvik
+dalvik.vm.dex2oat64.enabled=true
+
 # Data modules
 persist.data.df.dev_name=rmnet_usb0
 persist.vendor.data.mode=concurrent
