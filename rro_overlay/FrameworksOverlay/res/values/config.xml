@@ -976,4 +976,7 @@
         <item>SUPL_HOST=supl.google.com</item>
         <item>SUPL_PORT=7275</item>
     </string-array>
+
+    <!-- If true, the display will be shifted around in ambient mode. -->
+    <bool name="config_enableBurnInProtection">true</bool>
 </resources>
