@@ -113,6 +113,7 @@ TARGET_COPY_OUT_SYSTEM_EXT := 				system_ext
 TARGET_COPY_OUT_VENDOR := 					vendor
 
 # Platform
+BOARD_VENDOR := xiaomi
 TARGET_BOARD_PLATFORM := sdm845
 
 # Power
