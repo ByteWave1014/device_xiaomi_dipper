@@ -166,6 +166,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_dipper
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.1-service.dipper
+
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail \
