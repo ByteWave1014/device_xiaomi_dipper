@@ -67,10 +67,14 @@ on init
     chmod 0660 /dev/mi-camera-vendor2hal
     chmod 0660 /dev/mi-camera-hal2vendor
 
+on early-fs
+    # We need vold early for metadata encryption
+    start vold
+
 on fs
-    wait /dev/block/platform/soc/1d84000.ufshc
-    symlink /dev/block/platform/soc/1d84000.ufshc /dev/block/bootdevice
-    mount_all /vendor/etc/fstab.qcom
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    mount_all /vendor/etc/fstab.qcom --early
     mkdir /mnt/vendor/persist 0771 root system
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
@@ -81,6 +85,13 @@ on fs
     mkdir /mnt/vendor/persist/fdsd 0777 root root
     mkdir /mnt/vendor/persist/stability 0755 system system
     mkdir /mnt/vendor/persist/wlan_bt 0755 system system
+
+on late-fs
+    # Wait for keymaster
+    exec_start wait_for_keymaster
+
+    # Mount RW partitions which need run fsck
+    mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
