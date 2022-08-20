@@ -12,6 +12,7 @@
 /dev/block/by-name/vendor                    /vendor                 ext4    ro,avb,barrier=1,discard                                                                              wait,first_stage_mount
 
 /dev/block/bootdevice/by-name/userdata       /data                   ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc                                                    latemount,wait,check,reservedsize=128M,fileencryption=ice,quota
+/dev/block/by-name/logdump                   /metadata                ext4   noatime,nosuid,nodev,discard                                                                      wait,check,formattable,first_stage_mount
 /dev/block/bootdevice/by-name/cache          /cache                  ext4    noatime,nosuid,nodev,barrier=1                                                                    wait
 
 /dev/block/bootdevice/by-name/bluetooth      /vendor/bt_firmware     vfat    ro,shortname=lower,uid=1002,gid=3002,dmask=227,fmask=337,context=u:object_r:bt_firmware_file:s0   wait
