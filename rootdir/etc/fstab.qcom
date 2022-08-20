@@ -11,7 +11,7 @@
 /dev/block/by-name/cust                      /system_ext             ext4    ro,avb,barrier=1,discard                                                                              wait,first_stage_mount
 /dev/block/by-name/vendor                    /vendor                 ext4    ro,avb,barrier=1,discard                                                                              wait,first_stage_mount
 
-/dev/block/bootdevice/by-name/userdata       /data                   ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc                                                    latemount,wait,check,reservedsize=128M,fileencryption=ice,quota
+/dev/block/bootdevice/by-name/userdata       /data                   ext4    noatime,nosuid,nodev,barrier=1,noauto_da_alloc                                                    latemount,wait,check,formattable,fileencryption=::v1,quota,reservedsize=128M
 /dev/block/by-name/logdump                   /metadata                ext4   noatime,nosuid,nodev,discard                                                                      wait,check,formattable,first_stage_mount
 /dev/block/bootdevice/by-name/cache          /cache                  ext4    noatime,nosuid,nodev,barrier=1                                                                    wait
 
