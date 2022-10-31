@@ -234,6 +234,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    ApertureOverlay \
     CarrierConfigOverlay \
     FaceUnlockServiceOverlay \
     FrameworksOverlay \
