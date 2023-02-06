@@ -63,22 +63,29 @@ BOARD_KERNEL_CMDLINE := \
 	earlycon=msm_geni_serial,0xA84000 \
 	androidboot.hardware=qcom \
 	androidboot.console=ttyMSM0 \
-	msm_rtb.filter=0x237 \
+	androidboot.usbcontroller=a600000.dwc3 \
 	ehci-hcd.park=3 \
 	lpm_levels.sleep_disabled=1 \
+	msm_rtb.filter=0x237 \
 	service_locator.enable=1 \
 	swiotlb=2048 \
-	androidboot.configfs=true \
 	loop.max_part=7 \
-	androidboot.usbcontroller=a600000.dwc3 \
-	androidboot.boot_devices=soc/1d84000.ufshc
+	androidboot.configfs=true \
+	androidboot.boot_devices=soc/1d84000.ufshc \
+	cgroup_disable=pressure
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CONFIG := vendor/xiaomi/mi845_defconfig
-TARGET_KERNEL_CONFIG += vendor/xiaomi/dipper.config
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm845
+
+# Kernel - Config
+TARGET_KERNEL_SOURCE := kernel/xiaomi/dipper
+TARGET_KERNEL_CONFIG := dipper_defconfig
+
+# Kernel - Clang
+TARGET_KERNEL_CLANG_VERSION := prelude
+KERNEL_TOOLCHAIN := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-prelude/bin
+KERNEL_SUPPORTS_LLVM_TOOLS := true
 
 # LMKD
 TARGET_LMKD_STATS_LOG := true
