@@ -961,4 +961,16 @@
     <string-array name="config_biometric_sensors" translatable="false" >
         <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
+
+    <!-- GNSS configurations to override carrier config. Empty by default-->
+    <string-array name="config_gnssParameters" translatable="false">
+        <!-- Add configurations here, example: -->
+        <!-- <item>SUPL_HOST=supl.google.com</item> -->
+        <item>NTP_SERVER=pool.ntp.org</item>
+        <item>LONGTERM_PSDS_SERVER_1=http://gllto.glpals.com/7day/v5/latest/lto2.dat</item>
+        <item>LONGTERM_PSDS_SERVER_2=http://gllto1.glpals.com/7day/v5/latest/lto2.dat</item>
+        <item>LONGTERM_PSDS_SERVER_3=http://gllto2.glpals.com/7day/v5/latest/lto2.data</item>
+        <item>SUPL_HOST=supl.google.com</item>
+        <item>SUPL_PORT=7275</item>
+    </string-array>
 </resources>
