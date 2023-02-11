@@ -5,7 +5,7 @@
 //
 
 runtime_resource_overlay {
-    name: "NoCutoutOverlay",
+    name: "DipperNoCutoutOverlay",
     theme: "DisplayCutoutNoCutout",
     sdk_version: "current",
     product_specific: true,

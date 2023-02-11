@@ -236,6 +236,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ApertureOverlay \
     CarrierConfigOverlay \
+    DipperNoCutoutOverlay \
     FaceUnlockServiceOverlay \
     FrameworksOverlay \
     NoCutoutOverlay \
