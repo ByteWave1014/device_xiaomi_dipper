@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2021 The LineageOS Project
+     Copyright (C) 2022 Evolution X
+     SPDX-License-Identifier: Apache-2.0
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Build Maintainer-->
+    <string name="build_maintainer_sumary">Matheus Costa (LuMorningStarr)</string>
+    <string name="build_maintainer_telegram">https://t.me/LuMorningStarr</string>
+
+    <!-- Build Status-->
+    <string name="build_status_summary">Never Saw The Light</string>
+</resources>
+
